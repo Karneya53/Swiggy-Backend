@@ -31,11 +31,12 @@ app.post('/add-restaurant',async function(request,response){
             "avgRating" : request.body.avgrating,
             "costForTwo" : request.body.costForTwo,
             "cuisines" : request.body.cuisines,
+            "imageLink":request.body.imageLink,
             "resname" : request.body.name
         })
         response.status(201).json({
             "status" : "success",
-            "message" : "user created"
+            "message" : "restaurant added"
             })
     } catch (error) {
         response.status(500).json({
